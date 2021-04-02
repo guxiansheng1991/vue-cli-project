@@ -1,0 +1,34 @@
+// 1px边框
+@mixin border-1px($width: 1px, $color: #ccc, $radius: 0px, $direction: all) {
+  position: relative;
+  &::after {
+    content: "";
+    pointer-events: none;
+    display: block;
+    position: absolute;
+    border-radius: $radius;
+    box-sizing: border-box;
+    width: 100%;
+    height: 100%;
+    left: 0;
+    top: 0;
+    transform-origin: 0 0;
+    @if($direction == all) {
+      border: $width solid $color;
+    } @else {
+      border-#{$direction}: $width solid $color;
+    }
+    @media only screen and (-webkit-min-device-pixel-ratio:2) {
+      width: 200%;
+      height: 200%;
+      border-radius: $radius * 2;
+      transform: scale(.5);
+    }
+    @media only screen and (-webkit-min-device-pixel-ratio:3) {
+      width: 300%;
+      height: 300%;
+      border-radius: $radius * 3;
+      transform: scale(.333);
+    }
+  }
+}
