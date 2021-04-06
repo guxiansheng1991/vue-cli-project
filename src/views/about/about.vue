@@ -1,9 +1,17 @@
 <template>
   <div id="nav">
-    此处是介绍文件,此处是介绍文件,此处是介绍文件
+	about,about,about,about,about,about
   </div>
-  <router-view/>
 </template>
+
+<script>
+export default {
+	name: 'about',
+	data() {
+		return {}
+	}
+}
+</script>
 
 <style lang="scss">
 #app {

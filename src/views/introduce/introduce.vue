@@ -1,11 +1,20 @@
 <template>
   <div id="nav">
-    <router-link to="/">Home</router-link> |
-    <router-link to="/about">About</router-link> |
-	<router-link to="/lodash">Lodash</router-link>
+    此处是介绍文件,此处是介绍文件,此处是介绍文件
   </div>
-  <router-view/>
 </template>
+
+<script>
+export default {
+	name: 'introduce',
+	data() {
+		return {}
+	},
+	created() {
+		console.log('当前环境变量NODE_ENV:', process.env.NODE_ENV);
+	}
+}
+</script>
 
 <style lang="scss">
 #app {
