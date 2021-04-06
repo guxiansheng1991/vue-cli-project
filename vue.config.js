@@ -1,4 +1,7 @@
 const path = require('path');
+
+console.log('当前环境变量NODE_ENV:', process.env.NODE_ENV);
+
 module.exports = {
     chainWebpack: config => {
         const types = ['vue-modules', 'vue', 'normal-modules', 'normal']
