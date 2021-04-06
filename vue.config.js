@@ -1,5 +1,7 @@
 const path = require('path');
-console.log(123);
+
+console.log('当前环境变量NODE_ENV:', process.env.NODE_ENV);
+
 module.exports = {
     // 配置多页应用
     pages: {

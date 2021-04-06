@@ -13,6 +13,10 @@ export default {
   name: 'Home',
   components: {
     HelloWorld
-  }
+  },
+	created() {
+		console.log('当前环境变量NODE_ENV:', process.env.NODE_ENV);
+		console.log('当前环境变量VUE_APP_ENV:', process.env.VUE_APP_ENV);
+	}
 }
 </script>
