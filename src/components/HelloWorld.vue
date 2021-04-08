@@ -1,32 +1,43 @@
 <template>
   <div class="hello">
-    <h1>dpr: {{dpr}}</h1>
-    <h1>屏幕宽高: {{innerWidth}}, {{innerHeight}}</h1>
+    <h1>dpr: {{ dpr }}</h1>
+    <h1>屏幕宽高: {{ innerWidth }}, {{ innerHeight }}</h1>
     <div class="box">box</div>
     <div class="ingore_box">ingore_box</div>
     <div class="box-1px"></div>
     <!--  图片模糊解决  -->
-    <img class="ingore_img" src="https://www.zhangxinxu.com/study/201410/mm-width-128px.jpg"
-         srcset="https://www.zhangxinxu.com/study/201410/mm-width-128px.jpg 128w, https://www.zhangxinxu.com/study/201410/mm-width-256px.jpg 256w, https://www.zhangxinxu.com/study/201410/mm-width-512px.jpg 512w"
-         sizes="(max-width: 360px) 128px, 256px" alt="图片模糊解决">
+    <img
+      class="ingore_img"
+      src="https://www.zhangxinxu.com/study/201410/mm-width-128px.jpg"
+      srcset="
+        https://www.zhangxinxu.com/study/201410/mm-width-128px.jpg 128w,
+        https://www.zhangxinxu.com/study/201410/mm-width-256px.jpg 256w,
+        https://www.zhangxinxu.com/study/201410/mm-width-512px.jpg 512w
+      "
+      sizes="(max-width: 360px) 128px, 256px"
+      alt="图片模糊解决"
+    />
     <div class="img-bg">img-bg</div>
   </div>
 </template>
 
 <script>
 export default {
-  name: 'HelloWorld',
+  name: "HelloWorld",
   props: {
-    msg: String
+    msg: String,
   },
   data() {
     return {
       dpr: window.devicePixelRatio,
       innerWidth: window.innerWidth,
-      innerHeight: window.innerHeight
-    }
-  }
-}
+      innerHeight: window.innerHeight,
+    };
+  },
+  created() {
+    console.log(1231);
+  },
+};
 </script>
 
 <!-- Add "scoped" attribute to limit CSS to this component only -->
