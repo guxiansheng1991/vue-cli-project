@@ -9,6 +9,7 @@
     "build:dev": "vue-cli-service build --mode dev",
     "build:pre": "vue-cli-service build --mode pre",
     "build:prd": "vue-cli-service build --mode prd",
+    "build:dev:home": "vue-cli-service build --mode dev ./src/index.js",
     "lint": "vue-cli-service lint"
   },
   "dependencies": {

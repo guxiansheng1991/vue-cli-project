@@ -8,13 +8,6 @@ module.exports = {
     types.forEach((type) =>
       addStyleResource(config.module.rule("scss").oneOf(type))
     );
-    if (process.env.NODE_ENV === "production") {
-      config.set("externals", {
-        vue: "Vue",
-        "vue-router": "VueRouter",
-        lodash: "_",
-      });
-    }
   },
 };
 
